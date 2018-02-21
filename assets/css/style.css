@@ -1,0 +1,330 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}/*HTML5display-roleresetforolderbrowsers*/article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}body{line-height:1;}ol,ul{list-style:none;}blockquote,q{quotes:none;}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}table{border-collapse:collapse;border-spacing:0;}
+
+html, body, a, p, ul, li, h1, h2, h3 {
+	font-family: 'Raleway', sans-serif;
+	color: #BBB;
+	text-decoration: none;
+}
+
+h1 {
+	font-size: 40px;
+}
+
+.main {
+	width: 100%;
+	height: 100%;
+	background-color: #f0f0f0;
+	position: absolute;
+}
+
+.viewport {
+	height: 100%;
+	width: 600px;
+	box-sizing: border-box;
+	position: absolute;
+	margin: 0 auto;
+	left: 50%;
+	transform: translateX(-50%);
+	border-radius: 20px;
+	box-shadow: 5px 5px 5px rgba(0,0,0,.3);
+	overflow: hidden;
+}
+@media only screen and (max-width: 800px) {
+    .viewport {width: 400px;}
+}
+@media only screen and (max-width: 500px) {
+    .viewport {width: 100%;}
+}
+
+.main-header, .main-footer {
+	padding: 30px;
+	box-sizing: border-box;
+}
+.main-header {
+	background: #fff;
+	height: 100px;
+	width: 100%;
+	position: absolute;
+	top: 0px;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	z-index: 9999;
+}
+.main-container, .next-container {
+	width: 100%;
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	overflow: auto;
+	padding-left: 30px;
+	box-sizing: border-box;
+	padding: 0 25px;
+	padding-top: 120px;
+	padding-bottom: 75px;
+	background-color: #fdfdfd;
+	border-radius: 20px;
+}
+.next-container {
+	left:100%;
+}
+
+.main-footer {
+	height: 75px;
+	width: 100%;
+	position: absolute;
+	bottom: 0px;
+	background: #fff;
+	border-bottom-right-radius: 20px;
+	border-bottom-left-radius: 20px;
+}
+.main-footer ul {
+	position: absolute;
+	width: 100%;
+	box-sizing: border-box;
+	left: 0;
+}
+#side-foot{
+left: -100%;
+}
+#side-foot a {
+	border: 1px solid #00d1b2;
+	color: #00d1b2;
+	border-radius: 4px;
+	padding: 5px 10px;
+	font-weight: 600;
+}
+.hide {
+	display: none;
+}
+
+.add-button {
+    box-sizing: border-box;
+	position: relative; 
+	float:right;
+	top: 3px;
+	right: 7px;
+    animation-name: exampletwo;
+    animation-duration: 1s;
+}
+#plus svg {
+	fill: #999;
+}
+#plus svg:hover {
+	fill: #000;
+}
+.options {
+	color:#fff;
+	width: 100%;
+	height: 75px;
+	top: 0px;
+	padding: 30px;
+	background-color: rgba(0,0,0,.7);
+    box-sizing: border-box;
+	position: absolute; 
+	left:0;
+	z-index: 5555;
+	border-bottom: 1px solid #bbb;
+}
+.options a {
+	color: #fff;
+}
+.sort-button {
+	width: 20px;
+	height: 20px;
+    box-sizing: border-box;
+	position: absolute; 
+	right: 20px;
+	bottom: -47px;
+	z-index: 8888;
+}
+.sort-button svg {
+	width: 20px;
+	height: 20px;
+	fill:rgb(128,128,128);
+}
+
+.sort-button svg:hover {
+	fill: #000;
+}
+.add-button.chosen {
+    -ms-transform: rotate(135deg); /* IE 9 */
+    -webkit-transform: rotate(135deg); /* Safari */
+    transform: rotate(135deg);
+    animation-name: example;
+    animation-duration: 1s;
+}
+
+@keyframes exampletwo {
+    from {
+    	-ms-transform: rotate(135deg); /* IE 9 */
+	    -webkit-transform: rotate(135deg); /* Safari */
+	    transform: rotate(135deg);
+	}
+    to {
+	    -ms-transform: rotate(0deg); /* IE 9 */
+	    -webkit-transform: rotate(0deg); /* Safari */
+	    transform: rotate(0deg);
+    }
+}
+@keyframes example {
+    from {
+	    -ms-transform: rotate(0deg); /* IE 9 */
+	    -webkit-transform: rotate(0deg); /* Safari */
+	    transform: rotate(0deg);
+	}
+    to {
+    	-ms-transform: rotate(135deg); /* IE 9 */
+	    -webkit-transform: rotate(135deg); /* Safari */
+	    transform: rotate(135deg);
+    }
+}
+.main-header {
+	border-bottom: 1px solid #bbb;
+}
+.main-footer {
+	border-top: 1px solid #bbb;
+	z-index: 9999;
+}
+.main-footer ul {
+	text-align: center;
+}
+.main-footer ul li {
+	display: inline;
+	margin: 0 10px;
+}
+ul li a.actif {
+	text-decoration: underline;
+}
+
+
+.options ul {
+	text-align: center;
+}
+.options ul li {
+	display: inline;
+	margin: 0 10px;
+}
+
+
+/***********  TASK ITEMS **************/
+.task-list li {
+	padding: 20px 10px;
+	display: block;
+    vertical-align: middle;
+}
+
+.task {
+	display: flex;
+  	justify-content: space-between;
+}
+.task-heading {
+
+}
+.task-check {
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	background-repeat: no-repeat;
+	position: absolute;
+}
+.task-check.done-task {
+	background-image: url('../images/radio-checked.svg');
+    background-size: 20px 20px;
+}
+.task-check.late-task {
+	background-image: url('../images/radio-checked2.svg');
+    background-size: 20px 20px;
+}
+.task-check.todo-task {
+	background-image: url('../images/radio-unchecked.svg');
+    background-size: 20px 20px;
+}
+.task-name {
+	font-size: 20px;
+	display: inline-block;
+	box-sizing: border-box;
+	padding-left: 30px;
+	/*border: 1px solid green;*/
+}
+.task-actions {
+	position: relative;
+}
+.task-actions li {
+	padding: 0 7px;
+	display: inline-block;
+}
+.task-actions li:last-child {
+	padding-right: 15px;
+}
+.task-actions svg {
+	width: 20px;
+	height: 20px;
+	fill: rgb(128,128,128);
+}
+.task-actions svg:hover {
+	fill: #000;
+}
+.mirage {
+	box-sizing: border-box;
+	background-color: #fdfdfd;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+}
+.task-name.late-task {
+    text-decoration: line-through;
+    text-decoration-color: red;
+}
+.task-name.done-task {
+    text-decoration: line-through;
+    text-decoration-color: #000;
+}
+
+/***********  TASK DETAILS **************/
+.details {
+	margin-top: 10px;
+	height: 0px;
+	overflow: hidden;
+	/*border: 1px solid green;*/
+}
+.details p {
+	padding: 20px;
+}
+.desc {
+	font-size: 16px;
+}
+.time-info {
+	font-size: 14px;
+}
+
+.clear {
+	text-align: right;
+}
+.clear a {
+	padding: 25px;
+}
+.form {
+	width: 100%;
+	box-sizing: border-box;
+}
+.input {
+	box-sizing: border-box;
+	border: none;
+	width: 100%;
+	border-bottom: 1px solid #bbb;
+	font-family: 'Raleway', sans-serif;
+	font-size: 16px;
+	margin-bottom: 10px;
+	padding: 10px;
+}
+h3 {
+	padding-top: 20px;
+	margin-bottom: 10px;
+	font-weight: 600;
+	font-size: 20px;
+}
+
